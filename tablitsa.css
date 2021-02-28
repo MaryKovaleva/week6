@@ -1,0 +1,72 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 1fr 30%;
+    grid-template-areas:
+        "header header header header"
+        "main main main side"
+        "footer footer footer footer";
+    height: 40vh;
+    width: 70%;
+    border: 1px solid yellow;
+    font-weight: bold;
+}
+
+header {
+    grid-area: header;
+    background-color: silver;
+    text-align: center;
+}
+
+main {
+
+    grid-area: main;
+    background-color: peru;
+}
+
+.number1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "color color"
+        "nomer1 nomer2"
+        "nomer3 nomer3";
+}
+
+#color {
+    grid-area: color;
+    text-align: center;
+}
+
+.nomer1 {
+    text-align: center;
+    border: 1px solid silver;
+    grid-area: nomer1;
+}
+
+.nomer2 {
+    text-align: center;
+    border: 1px solid silver;
+    grid-area: nomer2;
+}
+
+.nomer3 {
+    text-align: center;
+    border: 1px solid silver;
+    grid-area: nomer3;
+}
+
+.side {
+    text-align: center;
+    grid-area: side;
+    background-color: palegreen;
+}
+
+footer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "footer footer footer footer";
+    grid-area: footer;
+    background-color: silver;
+}
