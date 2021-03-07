@@ -1,0 +1,101 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 1fr 30%;
+    grid-template-areas:
+        "header header header header"
+        "main main main side"
+        "footer footer footer footer";
+    height: 50%;
+    width: 100%;
+    border: 1px solid yellow;
+    font-weight: bold;
+}
+
+header {
+    grid-area: header;
+    background-color: silver;
+    text-align: center;
+}
+
+main {
+
+    grid-area: main;
+    background-color: peru;
+}
+
+.number1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 4px;
+    grid-template-areas:
+        "color color"
+        "nomer1 nomer2"
+        "nomer3 nomer3";
+}
+
+#color {
+    background-color: blanchedalmond;
+    grid-area: color;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nomer1 {
+    background-color: blanchedalmond;
+    text-align: center;
+    border: 1px solid silver;
+    grid-area: nomer1;
+}
+
+.nomer2 {
+    background-color: blanchedalmond;
+    text-align: center;
+    border: 1px solid silver;
+    grid-area: nomer2;
+}
+
+.nomer3 {
+    background-color: blanchedalmond;
+    text-align: center;
+    border: 1px solid silver;
+    grid-area: nomer3;
+}
+
+.side {
+    text-align: center;
+    grid-area: side;
+    background-color: palegreen;
+}
+
+
+
+@media screen and (min-width:1024px) {
+    footer {
+        height: 40%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "footer footer footer footer";
+        grid-area: footer;
+        background-color: silver;
+    }
+}
+
+
+@media screen and (max-width: 475px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 10% 1fr 1fr;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "side side side side";
+        height: 50%;
+        width: 100%;
+        border: 1px solid yellow;
+        font-weight: bold;
+    }
+}
